@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="/assets/calculadora.css">
+  <style>
+    /* Estilos para centralizar a calculadora */
+    body, html {
+      height: 100%;
+    justify-content: center;
+      margin: 0;
+      display: flex;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+   
+       <input type="text" id="display" disabled>
+    <div class="buttons">
+      <button class="btn number" onclick="appendToDisplay('7')">7</button>
+      <button class="btn number" onclick="appendToDisplay('8')">8</button>
+      <button class="btn number" onclick="appendToDisplay('9')">9</button>
+      <button class="btn operation" onclick="appendToDisplay('+')">+</button>
+      <button class="btn number" onclick="appendToDisplay('4')">4</button>
+      <button class="btn number" onclick="appendToDisplay('5')">5</button>
+      <button class="btn number" onclick="appendToDisplay('6')">6</button>
+      <button class="btn operation" onclick="appendToDisplay('-')">-</button>
+      <button class="btn number" onclick="appendToDisplay('1')">1</button>
+      <button class="btn number" onclick="appendToDisplay('2')">2</button>
+      <button class="btn number" onclick="appendToDisplay('3')">3</button>
+      <button class="btn operation" onclick="appendToDisplay('*')">*</button>
+      <button class="btn" onclick="clearDisplay()">C</button>
+      <button class="btn number" onclick="appendToDisplay('0')">0</button>
+      <button class="btn operation" onclick="appendToDisplay('/')">/</button>
+      <button id="calculateBtn" class="btn equal">=</button>
+
+
+    </div>
+  </div>
+
+
+
+<div class="banner">
+  <h2 id="historyTitle">Histórico de Operações</h2>
+  <a href="#" id="clearLink" class="btn-clear">Limpar Dados</a>
+  <ul id="operationResultsList"></ul>
+</div>
+
+
+  <script src="/assets/calculadora.js"></script>
+</body>
+</html>
